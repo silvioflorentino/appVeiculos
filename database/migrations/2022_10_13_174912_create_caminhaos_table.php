@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('marca');
             $table->string('ano');
             $table->string('cor');
-            $table->string('valor')->nullable();
+            $table->string('valor');
             $table->timestamps();
         });
     }

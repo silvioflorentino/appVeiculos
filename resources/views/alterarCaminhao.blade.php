@@ -2,8 +2,9 @@
 @section('content')
 <section>
   <div class="container cadastroCaminhao">
-    <form class="row g-3" method="post" action="{{route('salvar-banco')}}">
+    <form class="row g-3" method="post" action="{{route('alterar-banco-caminhao',$registrosCaminhoes->id)}}">
       @csrf
+      @method('put')
       <div class="col-md-12">
         <label for="inputModelo" class="form-label">Modelo</label>
         <input type="text" name="modelo" value="{{old('modelo',$registrosCaminhoes->modelo)}}" class="form-control" id="inputModelo" placeholder="Fusca">
